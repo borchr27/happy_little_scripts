@@ -1,0 +1,14 @@
+#!/bin/zsh
+# written on 4/1 for hw checking, improvements to include answer checking rather than just displaying
+# small script for running batch of cyclic graphs with C# 'Program.cs' in the directory
+# chmod 755 script.txt to change permissions
+# ./script to run
+
+echo Starting tests for ${PWD##*/} files ...
+
+for file in input*.txt
+do
+	echo Running $file
+	dotnet run < $file
+	echo ----------------
+done
